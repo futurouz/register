@@ -32,7 +32,7 @@ h1 {
    width: 100%;
    z-index: 1;
    position: absolute;
-   background: url(../images/star.png) no-repeat center;
+   background: url(../img/star.png) no-repeat center;
 }
 .hvr-outline-out-star {
   display: inline-block;
@@ -105,9 +105,10 @@ h1 {
 .input-section {
    margin-top: 50px;
    margin-bottom: 50px;
+   animation: wait-for-logo 5.2s;
 }
 .submit-btn {
-   margin-top: 15px;
+   margin-top: 45px;
    background: #6ACBE1;
    padding: 15px 80px 15px 80px;
    font-size: 26px;
@@ -165,14 +166,14 @@ h1 {
 .earth{
    height: 800px;
    z-index: 1;
-   background: url(../images/earth.png) no-repeat center center;
+   background: url(../img/earth.png) no-repeat center center;
    margin-top: -50px;
    padding: 0;
    animation: earth-move 30s infinite linear;
    min-width: 620px;
 }
 .saturn{
-   z-index: 2;
+   z-index: 3;
    top: 230px;
    left: 50px;
    position: absolute;
@@ -180,22 +181,22 @@ h1 {
    animation: saturn-move 2.5s infinite alternate;
 }
 .star5{
-   z-index: 2;
+   z-index: 3;
    top: 650px;
    left: 60px;
    position: absolute;
    width: 50px;
 }
 .urenus {
-   z-index: 2;
-   top: 150px;
-   right: 7em;
+   z-index: 3;
+   top: 50px;
+   right: 3em;
    position: absolute;
    width: 150px;
    animation: urenus-move 3.2s infinite alternate;
 }
 .star3 {
-   z-index: 2;
+   z-index: 3;
    top: 500px;
    right: 18em;
    position: absolute;
@@ -210,8 +211,8 @@ h1 {
    animation: rocket-move-x 3.2 infinite alternate;
 }
 .rocket {
-   z-index: 2;
-   bottom: -250px;
+   z-index: 3;
+   bottom: -35%;
    left: 26%;
    position: absolute;
    width: 120px;
@@ -241,8 +242,8 @@ h1 {
 }
 .sattle2 {
    z-index: 3;
-   top: 200px;
-   right: 25%;
+   top: 300px;
+   right: 15%;
    position: absolute;
    width: 150px;
    transform: rotate(-45deg);
@@ -313,6 +314,11 @@ h1 {
    .sattle2 {
       display: none;
    }
+}
+@keyframes wait-for-logo {
+   0% { opacity: 0;}
+   60% { opacity: 0;}
+   100% { opacity: 1;}
 }
 @keyframes star-ping-ring {
    30% {
