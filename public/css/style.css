@@ -1,0 +1,403 @@
+@font-face {
+    font-family: supermarket;
+    src: url(../font/supermarket.ttf);
+}
+@font-face {
+   font-family: SPACEPORT;
+   src: url(../font/SPACEPORT.OTF);
+}
+body {
+   font-size: 18px;
+   font-family: supermarket;
+}
+h1 {
+   font-family: SPACEPORT;
+   font-size: 24px;
+}
+.container-site {
+   color: #FFF;
+   background: url(../img/space-bg.jpg) no-repeat center center;
+   background: #1C1925;
+   background: -webkit-linear-gradient(#1C1925, #11103C);
+   background: -o-linear-gradient(#1C1925, #11103C);
+   background: -moz-linear-gradient(#1C1925, #11103C);
+   background: linear-gradient(#1C1925, #11103C);
+   height: 100vh;
+   overflow: hidden;
+   z-index: 0;
+   padding: 0;
+}
+.star-bg {
+   height: 100vh;
+   width: 100%;
+   z-index: 1;
+   position: absolute;
+   background: url(../images/star.png) no-repeat center;
+}
+.hvr-outline-out-star {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0,0,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+.hvr-outline-out-star:before {
+  content: '';
+  position: absolute;
+  border: rgb(167, 171, 185) solid 1px;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: top, right, bottom, left;
+  transition-property: top, right, bottom, left;
+}
+.ping1.hvr-outline-out-star:before{
+   animation: star-ping-ring 1.5s infinite;
+   animation-delay: 1s;
+}
+.ping2.hvr-outline-out-star:before{
+   animation: star-ping-ring 1.5s infinite;
+   animation-delay: 3s;
+}
+.ping3.hvr-outline-out-star:before{
+   animation: star-ping-ring 1.5s infinite;
+   animation-delay: 4s;
+}
+.ping4.hvr-outline-out-star:before{
+   animation: star-ping-ring 1.5s infinite;
+   animation-delay: 5.14s;
+}
+.ping5.hvr-outline-out-star:before{
+   animation: star-ping-ring 1.5s infinite;
+   animation-delay: 1.35s;
+}
+.ping6.hvr-outline-out-star:before{
+   animation: star-ping-ring 1.5s infinite;
+   animation-delay: 2.14s;
+}
+.ping7.hvr-outline-out-star:before{
+   animation: star-ping-ring 1.5s infinite;
+   animation-delay: 3.14s;
+}
+.ping8.hvr-outline-out-star:before{
+   animation: star-ping-ring 1.5s infinite;
+   animation-delay: 5.65s;
+}
+.ping9.hvr-outline-out-star:before{
+   animation: star-ping-ring 1.5s infinite;
+   animation-delay: 3.49s;
+}
+.ping10.hvr-outline-out-star:before{
+   animation: star-ping-ring 1.5s infinite;
+   animation-delay: 1.46s;
+}
+.object-on-bg {
+   z-index: 2;
+}
+.input-section {
+   margin-top: 50px;
+   margin-bottom: 50px;
+}
+.submit-btn {
+   margin-top: 15px;
+   background: #6ACBE1;
+   padding: 15px 80px 15px 80px;
+   font-size: 26px;
+   width: 256.64px;
+   height: 58px;
+   transition: bacground .32s;
+   -webkit-transition: bacground .32s;
+}
+.hvr-outline-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0,0,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+.hvr-outline-out:before {
+  content: '';
+  position: absolute;
+  border: #6ACBE1 solid 4px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: top, right, bottom, left;
+  transition-property: top, right, bottom, left;
+}
+.hvr-outline-out:hover:before, .hvr-outline-out:focus:before {
+   border: #6ACBE1 solid 4px;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+}
+.hvr-outline-out:active:before {
+   border: #6ACBE1 solid 4px;
+   transition: all 0.1s;
+   top: -4px;
+   right: -4px;
+   bottom: -4px;
+   left: -4px;
+}
+.star {
+   height: 10px;
+   border-radius: 50%;
+   position: absolute;
+   width: 10px;
+   background: rgb(167, 171, 185);
+}
+.earth{
+   height: 800px;
+   z-index: 1;
+   background: url(../images/earth.png) no-repeat center center;
+   margin-top: -50px;
+   padding: 0;
+   animation: earth-move 30s infinite linear;
+   min-width: 620px;
+}
+.saturn{
+   z-index: 2;
+   top: 230px;
+   left: 50px;
+   position: absolute;
+   width: 250px;
+   animation: saturn-move 2.5s infinite alternate;
+}
+.star5{
+   z-index: 2;
+   top: 650px;
+   left: 60px;
+   position: absolute;
+   width: 50px;
+}
+.urenus {
+   z-index: 2;
+   top: 150px;
+   right: 7em;
+   position: absolute;
+   width: 150px;
+   animation: urenus-move 3.2s infinite alternate;
+}
+.star3 {
+   z-index: 2;
+   top: 500px;
+   right: 18em;
+   position: absolute;
+   width: 50px;
+}
+.star2 {
+   z-index: 2;
+   top: 450px;
+   left: 25em;
+   position: absolute;
+   width: 80px;
+   animation: rocket-move-x 3.2 infinite alternate;
+}
+.rocket {
+   z-index: 2;
+   bottom: -250px;
+   left: 26%;
+   position: absolute;
+   width: 120px;
+   animation: rocket-move-x 3.2 infinite alternate;
+}
+.rocket-move-y {
+   animation: rocket-move-y 3.2s infinite alternate;
+}
+.asto {
+   z-index: 3;
+   bottom: -260px;
+   right: 20%;
+   position: absolute;
+   width: 250px;
+   animation: asto-move-x 4s infinite alternate;
+}
+.asto-move-y {
+   animation: asto-move-y 4s infinite alternate;
+}
+.ufo {
+   left: -150px;
+   top: 70px;
+   position: absolute;
+   width: 150px;
+   animation: ufo-move 5s linear;
+   animation-delay: 3.5s;
+}
+.sattle2 {
+   z-index: 3;
+   top: 200px;
+   right: 25%;
+   position: absolute;
+   width: 150px;
+   transform: rotate(-45deg);
+}
+.container-logo {
+   margin-top: 50px;
+   overflow: hidden;
+}
+
+.draw {
+   fill-opacity: 0;
+   stroke: #fff;
+   stroke-width: 1;
+   stroke-dasharray: 800;
+   stroke-dashoffset: 800;
+   animation-name: draw;
+   animation-duration: 3s;
+   animation-fill-mode: forwards;
+   animation-timing-function: linear;
+}
+.no-svg{
+  background-image: url(../img/signup.png);
+}
+
+.scence-container {
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+}
+
+@media screen and (max-width: 989px) {
+    .rocket {
+        width: 80px;
+        bottom: -250px;
+    }
+    .asto {
+      right: 0;
+      bottom: -180px;
+      width: 150px;
+   }
+   .sattle2 {
+      bottom: -350px;
+      right: 15%;
+   }
+   .saturn {
+      width: 100px;
+      left: 30px;
+      top: 0;
+   }
+   .urenus{
+      right: -50px;
+      top: -300px;
+   }
+   .star3 {
+      display: none;
+   }
+   .star2 {
+      display: none;
+   }
+}
+@media screen and (max-width: 752px) {
+   .urenus{
+      width: 100px;
+   }
+   .ufo {
+      display: none;
+   }
+   .sattle2 {
+      display: none;
+   }
+}
+@keyframes star-ping-ring {
+   30% {
+      top: -30px;
+      right: -30px;
+      bottom: -30px;
+      left: -30px;
+   }
+   50% {
+      top: -30px;
+      right: -30px;
+      bottom: -30px;
+      left: -30px;
+      opacity: 0;
+   }
+   100%{
+      top: -10px;
+      right: -10px;
+      bottom: -10px;
+      left: -10px;
+      opacity: 0;
+   }
+}
+@keyframes draw {
+ 90% {
+    stroke-dashoffset: 0;
+    stroke-width: 1;
+    fill-opacity: 0;
+ }
+ 92% {
+    stroke-width: 0;
+    fill-opacity: 1;
+ }
+ 94%{
+    fill-opacity: 0;
+ }
+ 96%{
+    fill-opacity: 1;
+ }
+ 98%{
+    fill-opacity: 0;
+ }
+ 100%{
+    fill-opacity: 1;
+ }
+}
+@keyframes saturn-move {
+   25% { transform: translateX(2px);transform: translateY(2px); -webkit-transform: translateX(2px); -webkit-transform: translateY(2px);}
+    50% { transform: translateX(-4px); -webkit-transform: translateX(-4px); }
+    75% { transform: translateY(-4px); -webkit-transform: translateY(-4px);}
+    100% { transform: translateX(2px); -webkit-transform: translateX(2px);}
+}
+@keyframes urenus-move {
+   14% { transform: translateX(-4px); transform: translateY(-4px); -webkit-transform: translateX(-4px); -webkit-transform: translateY(-4px);}
+    28% { transform: translateX(2px); transform: translateY(2px); -webkit-transform: translateX(2px); -webkit-transform: translateY(2px);}
+    60% { transform: translateY(2px); transform: translateX(4px); -webkit-transform: translateY(2px); -webkit-transform: translateX(4px);}
+    100% { transform: translateX(-4px); -webkit-transform: translateX(-4px);}
+}
+@keyframes rocket-move-x {
+   from { transform: translateX(0px); -webkit-transform: translateX(0px);}
+   25% { transform: translateX(5px); -webkit-transform: translateX(5px);}
+   50% { transform: translateX(0px); -webkit-transform: translateX(0px);}
+   to { transform: translateX(-5px); -webkit-transform: translateX(-5px);}
+}
+@keyframes rocket-move-y {
+   from { transform: translateY(0px); -webkit-transform: translateY(0px);}
+   25% { transform: translateY(5px);  -webkit-transform: translateY(5px);}
+   50% { transform: translateY(0px); -webkit-transform: translateY(0px);}
+   to { transform: translateY(-5px); -webkit-transform: translateY(-5px);}
+}
+@keyframes asto-move-x {
+   from { transform: translateX(0px); -webkit-transform: translateX(0px);}
+   25% { transform: translateX(7px); -webkit-transform: translateX(7px);}
+   50% { transform: translateX(0px); -webkit-transform: translateX(0px);}
+   to { transform: translateX(-7px); -webkit-transform: translateX(-7px);}
+}
+@keyframes asto-move-y {
+   from { transform: translateY(0px); -webkit-transform: translateY(0px);}
+   25% { transform: translateY(7px); -webkit-transform: translateY(7px);}
+   50% { transform: translateY(0px); -webkit-transform: translateY(0px);}
+   to { transform: translateY(-7px); -webkit-transform: translateY(-7px);}
+}
+@keyframes earth-move {
+   to { transform: rotate(360deg); -webkit-transform: rotate(360deg);}
+}
+@keyframes ufo-move {
+   to{ transform: translateX(3000px); -webkit-transform: translateX(3000px);}
+}

@@ -1,0 +1,17 @@
+<form  action="store" method="post">
+    <label for="id">ID</label>
+
+    <input type="radio" name="prename" value="นาย">นาย
+    <input type="radio" name="prename" value="นางสาว">นางสาว
+    <input type="number" name="id" value=""><br>
+
+    <label for="name">name</label>
+    <input type="text" name="name" value=""><br>
+
+
+    <input type="hidden" name="_token" value="{{csrf_token()}}"><br>
+
+    <label for=""></label>
+    <input type="submit" name="submit" value="submit">
+
+</form>
